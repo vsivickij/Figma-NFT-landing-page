@@ -1,0 +1,105 @@
+@use "variables";
+@use "responsive";
+@use "mixins";
+
+.showcase-section {
+  padding-bottom: 120px;
+
+  & .showcase-text {
+    padding-bottom: 56px;
+
+    @include responsive.screen-sm {
+      padding-bottom: 40px;
+    }
+
+    & .opensea-text {
+      @include responsive.screen-sm {
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    }
+  }
+
+  & .showcase-cards {
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive.screen-lg {
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-around;
+    }
+
+    @include responsive.screen-sm {
+      gap: 40px;
+      width: max-content;
+    }
+
+    & .card-item {
+      width: calc((100% - (3 * 40px)) / 4);
+      display: flex;
+      flex-direction: column;
+      background-color: #eeeeee;
+      border-radius: 16px;
+
+      @include responsive.screen-lg {
+        width: 300px;
+      }
+
+      & .card-image {
+        width: 100%;
+      }
+
+      & .card-text-wrapper {
+        padding: 24px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / 1fr 1fr;
+
+        & .series-name {
+          text-transform: uppercase;
+          color: #ff8139;
+          font-weight: 500;
+          font-size: 12px;
+          align-self: center;
+        }
+
+        & .card-class {
+          text-transform: uppercase;
+          color: #777777;
+          font-weight: 500;
+          font-size: 12px;
+          justify-self: flex-end;
+          align-self: center;
+        }
+
+        & .card-name {
+          color: variables.$dark-color;
+          font-weight: 700;
+          padding-bottom: 12px;
+        }
+
+        & .card-price {
+          color: variables.$dark-color;
+          font-weight: 700;
+          justify-self: flex-end;
+        }
+
+        & .card-price::before {
+          content: url(./images/diamond-image.svg);
+          padding-right: 8px;
+        }
+
+        & .card-number {
+          color: #777777;
+          font-size: 18px;
+        }
+
+        & .card-remaining {
+          justify-self: flex-end;
+          color: #777777;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

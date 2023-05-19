@@ -1,0 +1,36 @@
+@use "variables";
+@use "responsive";
+@use "mixins";
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .navigation-list {
+    @include mixins.reset-list();
+    display: flex;
+
+    @include responsive.screen-md {
+      display: none;
+    }
+
+    li a {
+      @include mixins.reset-link();
+      padding-right: 28px;
+      color: variables.$dark-grey-color;
+    }
+
+    li:last-child a {
+      color: variables.$pink-color;
+    }
+  }
+
+  & .menu-icon {
+    display: none;
+
+    @include responsive.screen-md {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "variables";
+@use "responsive";
+@use "mixins";
+
+.press-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 0px;
+
+  @include responsive.screen-lg {
+    // gap: 50px;
+    // flex-wrap: wrap;
+    // margin: 60px 0px;
+    margin: 64px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @include responsive.screen-sm {
+    margin: 64px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  & .press-item {
+    @include responsive.screen-sm {
+      width: 100%;
+    }
+  }
+
+  & .press-item:nth-child(4) {
+    @include responsive.screen-sm {
+      display: none;
+    }
+  }
+}

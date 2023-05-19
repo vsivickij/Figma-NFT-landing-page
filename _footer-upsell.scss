@@ -1,0 +1,50 @@
+@use "variables";
+@use "responsive";
+@use "mixins";
+
+.footer-upsell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 150px;
+  border-top: 2px solid #eeeeee;
+  // position: relative;
+
+  @include responsive.screen-sm {
+    grid-template-columns: 60% 40%;
+    column-gap: 80px;
+  }
+
+  & .footer-upsell-text {
+    padding-top: 100px;
+
+    & .primary-heading {
+      font-size: 56px;
+    }
+
+    & .body-text {
+      @include responsive.screen-sm {
+        margin-bottom: 0;
+      }
+    }
+
+    & .signup-button {
+      @include responsive.screen-sm {
+        margin-top: 32px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  & .footer-upsell-image {
+    justify-self: center;
+    margin-top: 85px;
+    // position: absolute;
+    // top: 85px;
+    // right: 221px;
+
+    @include responsive.screen-sm {
+      justify-self: flex-end;
+      align-self: flex-end;
+    }
+  }
+}

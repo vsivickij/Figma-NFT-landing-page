@@ -1,0 +1,26 @@
+@use "variables";
+@use "responsive";
+@use "mixins";
+
+.upsell-section {
+  background-image: url(./images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+
+  @include responsive.screen-sm {
+    margin: 0 -52px;
+  }
+
+  & .upsell-text {
+    padding: 154px 0px 64px 64px;
+
+    @include responsive.screen-sm {
+      padding: 122px 32px 32px 52px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
