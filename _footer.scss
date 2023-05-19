@@ -8,11 +8,11 @@
   display: flex;
   column-gap: 250px;
 
-  @include responsive.screen-lg {
+  @include responsive.screen-xl {
     column-gap: 100px;
   }
 
-  @include responsive.screen-md {
+  @include responsive.screen-lg {
     padding-top: 60px;
     flex-direction: column;
   }
@@ -66,16 +66,18 @@
   padding-top: 100px;
   padding-bottom: 70px;
 
-  @include responsive.screen-sm {
-    padding-top: 0;
-    padding-bottom: 73px;
-  }
-
   & .footer-lower-text {
     color: #999999;
   }
 
-  //   & .footer-lower-text:last-child {
-  //     // display: none;
-  //   }
+  .footer-lower-text:last-child {
+    @include responsive.screen-md {
+      display: none;
+    }
+  }
+
+  @include responsive.screen-xs {
+    padding-top: 0;
+    padding-bottom: 73px;
+  }
 }

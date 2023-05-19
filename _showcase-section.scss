@@ -8,12 +8,12 @@
   & .showcase-text {
     padding-bottom: 56px;
 
-    @include responsive.screen-sm {
+    @include responsive.screen-xs {
       padding-bottom: 40px;
     }
 
     & .opensea-text {
-      @include responsive.screen-sm {
+      @include responsive.screen-xs {
         text-decoration: underline;
         font-weight: 600;
       }
@@ -24,13 +24,13 @@
     display: flex;
     justify-content: space-between;
 
-    @include responsive.screen-lg {
+    @include responsive.screen-xl {
       flex-wrap: wrap;
       gap: 40px;
       justify-content: space-around;
     }
 
-    @include responsive.screen-sm {
+    @include responsive.screen-xs {
       gap: 40px;
       width: max-content;
     }
@@ -42,7 +42,7 @@
       background-color: #eeeeee;
       border-radius: 16px;
 
-      @include responsive.screen-lg {
+      @include responsive.screen-xl {
         width: 300px;
       }
 

@@ -9,7 +9,17 @@
   border-top: 2px solid #eeeeee;
   // position: relative;
 
-  @include responsive.screen-sm {
+  @include responsive.screen-xl {
+    grid-template-columns: 60% 40%;
+    column-gap: 80px;
+  }
+
+  @include responsive.screen-md {
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+  }
+
+  @include responsive.screen-xs {
     grid-template-columns: 60% 40%;
     column-gap: 80px;
   }
@@ -22,13 +32,13 @@
     }
 
     & .body-text {
-      @include responsive.screen-sm {
+      @include responsive.screen-xs {
         margin-bottom: 0;
       }
     }
 
     & .signup-button {
-      @include responsive.screen-sm {
+      @include responsive.screen-xs {
         margin-top: 32px;
         margin-bottom: 50px;
       }
@@ -42,7 +52,16 @@
     // top: 85px;
     // right: 221px;
 
-    @include responsive.screen-sm {
+    @include responsive.screen-xl {
+      justify-self: flex-start;
+      align-self: flex-end;
+    }
+
+    // @include responsive.screen-md {
+    //   margin: 0 -50px;
+    // }
+
+    @include responsive.screen-xs {
       justify-self: flex-end;
       align-self: flex-end;
     }

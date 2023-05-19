@@ -7,7 +7,7 @@
   justify-content: space-between;
   margin: 120px 0px;
 
-  @include responsive.screen-lg {
+  @include responsive.screen-xl {
     // gap: 50px;
     // flex-wrap: wrap;
     // margin: 60px 0px;
@@ -17,7 +17,7 @@
     gap: 30px;
   }
 
-  @include responsive.screen-sm {
+  @include responsive.screen-xs {
     margin: 64px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -25,13 +25,13 @@
   }
 
   & .press-item {
-    @include responsive.screen-sm {
+    @include responsive.screen-xs {
       width: 100%;
     }
   }
 
   & .press-item:nth-child(4) {
-    @include responsive.screen-sm {
+    @include responsive.screen-xs {
       display: none;
     }
   }
