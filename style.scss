@@ -159,7 +159,7 @@ body {
 }
 
 .upsell-section {
-  background-image: url(/images/background.svg);
+  background-image: url(./images/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -296,7 +296,7 @@ body {
         }
 
         & .card-price::before {
-          content: url(/images/diamond-image.svg);
+          content: url(./images/diamond-image.svg);
           padding-right: 8px;
         }
 
